@@ -1,0 +1,32 @@
+﻿<Page x:Class="AnimalSitter.Pages.ListSitter"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimalSitter.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="ListSitter">
+
+    <Grid Background="AliceBlue">
+        <Image Source="C:\Users\Niyaz\source\repos\AnimalSitter\AnimalSitter\Pages\Images\update.png" Height="677" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200"/>
+        <ListBox Name="animalListBox" HorizontalContentAlignment="Stretch" Margin="10,97,10,10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="5">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Text}" TextWrapping="Wrap"/>
+                            <TextBlock Text="{Binding Experience}" TextWrapping="Wrap"/>
+                            <Button x:Name="Contact"  Content="Узнать контакты" Click="ShowContactButton_Click" Tag="{Binding Id_user}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Margin="18,18,980,612" Click="Main_Click" Content="Главная" FontSize="22"/>
+        <Button Margin="225,18,756,612" Click="Listining_Click" Content="Найти сиделку" FontSize="22"/>
+
+        <Button Margin="449,18,518,612" Click="Profile_Click" Content="Мой профиль" FontSize="22"/>
+    </Grid>
+</Page>

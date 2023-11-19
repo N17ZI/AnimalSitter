@@ -1,0 +1,36 @@
+﻿<Page x:Class="AnimalSitter.Pages.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimalSitter.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="Profile">
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="111*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="C:\Users\Niyaz\source\repos\AnimalSitter\AnimalSitter\Pages\Images\update.png" Margin="0,-6,0,0" Height="768" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200" Grid.RowSpan="2"/>
+
+        <TextBox x:Name="Name" Margin="168,89,758,392" Grid.Row="1" FontSize="22"/>
+        <TextBox x:Name="Surname" Margin="463,89,463,392" Grid.Row="1" FontSize="22"/>
+        <Button Content="Сохранить изменения" Margin="168,486,168,10" Grid.Row="1" Click="Button_Click"/>
+        <TextBox x:Name="Email" Margin="758,89,168,392" Grid.Row="1" FontSize="22"/>
+        <Button Margin="10,10,944,73" Click="Main_Click" Content="Главная" FontSize="22"/>
+        <Button Margin="261,10,667,73" Click="Listining_Click" Content="Найти сиделку" FontSize="22"/>
+        <Button Margin="538,10,429,73" Click="Profile_Click" Content="Мой профиль" FontSize="22"/>
+        <Label Content="Мои анкеты" Margin="168,168,168,0" Grid.Row="1" Height="37" VerticalAlignment="Top" FontSize="22"/>
+        <Label Content="Почта/Логин" Margin="758,52,168,0" Grid.Row="1" Height="37" VerticalAlignment="Top" FontSize="22"/>
+        <Label Content="Имя" Margin="168,52,758,0" Grid.Row="1" Height="37" VerticalAlignment="Top" FontSize="22"/>
+        <ListBox x:Name="profilesListBox" DisplayMemberPath="Name" SelectionChanged="ProfilesListBox_SelectionChanged" Margin="168,205,154,107" Grid.Row="1"/>
+
+        <Button Content="Удалить" Click="DeleteButton_Click" Margin="168,403,154,0" Grid.Row="1" Height="45" VerticalAlignment="Top"/>
+        <Label Content="Фамилия" Margin="463,52,463,0" Grid.Row="1" Height="37" VerticalAlignment="Top" FontSize="22"/>
+    </Grid>
+</Page>
