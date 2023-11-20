@@ -32,7 +32,6 @@ namespace AnimalSitter.Pages
 				{
 					string contactInfo = $"Name: {foundUser.Name}\nEmail: {foundUser.Email}";
 
-					// Создаем и открываем новое окно с QR-кодом
 					QRCodeWindow qrCodeWindow = new QRCodeWindow(contactInfo);
 					qrCodeWindow.ShowDialog();
 				}

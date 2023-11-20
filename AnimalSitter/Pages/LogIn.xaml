@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1200"
       Title="LogIn">
-
+    
     <Grid Background="DarkOliveGreen">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -20,10 +20,10 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
+        <Image Source="C:\Users\Niyaz\source\repos\AnimalSitter\AnimalSitter\Pages\Images\defaultbackground.png" Margin="-60,0,-60,0" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="719" VerticalAlignment="Top"/>
         <TextBlock Text="Log In" FontSize="20" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0,0,0,20" />
 
-        <Label Content="Login" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,99,0,0" Width="214"/>
+        <Label Content="Login/Email" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,99,0,0" Width="214"/>
         <TextBox x:Name="txtLogin" Grid.Column="1" Margin="67,125,67,50" />
         <Label Content="Password" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,197,0,0" Width="182"/>
         <PasswordBox x:Name="txtPassword" Grid.Column="1" Margin="67,10,67,157" Grid.Row="1"/>

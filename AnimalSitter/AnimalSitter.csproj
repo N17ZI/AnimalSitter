@@ -212,6 +212,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Pages\Images\defaultbackground.png" />
     <Resource Include="Pages\Images\update.png" />
     <Resource Include="Pages\Images\backgrounds.png" />
     <Resource Include="Pages\Images\main.png" />

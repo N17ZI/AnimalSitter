@@ -8,7 +8,7 @@
       d:DesignHeight="700" d:DesignWidth="1200"
       Title="SignUp">
 
-    <Grid Background="DarkOliveGreen">
+    <Grid Background="DarkOliveGreen" Height="700" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1200">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -21,8 +21,8 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
-        <TextBlock Text="Sign Up" FontSize="20" FontWeight="Bold" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,105" />
+        <Image Source="C:\Users\Niyaz\source\repos\AnimalSitter\AnimalSitter\Pages\Images\defaultbackground.png" Margin="-60,0,-60,0" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="719" VerticalAlignment="Top"/>
+        <TextBlock Text="Sign Up" FontSize="20" FontWeight="Bold" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,183" />
 
         <Label Content="Login" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,50,0,0" Width="182"/>
         <TextBox x:Name="txtLogin" Grid.Column="1" Margin="74,76,54,120" />

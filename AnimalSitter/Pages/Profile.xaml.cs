@@ -47,21 +47,18 @@ namespace AnimalSitter.Pages
 		{
 			if (profilesListBox.SelectedItem != null)
 			{
-				// Получите выбранную анкету
 				var selectedProfile = (Listining)profilesListBox.SelectedItem;
 
-				// Удалите анкету из базы данных
 				ConnectionDB.AnimalSittersEntities.Listining.Remove(selectedProfile);
 				ConnectionDB.AnimalSittersEntities.SaveChanges();
 
-				// Удалите из ObservableCollection
 				userProfiles.Remove(selectedProfile);
 			}
 		}
 
 		private void ProfilesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			// Обработка выбора элемента в списке (если необходимо)
+
 		}
 
 		private void Main_Click(object sender, RoutedEventArgs e)
@@ -84,18 +81,17 @@ namespace AnimalSitter.Pages
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			User user = ConnectionDB.AnimalSittersEntities.User.FirstOrDefault(x => x.Id_user == ConnectionDB.current_id);
-			if (user != null)
+			if (user != null && !ConnectionDB.AnimalSittersEntities.User.Any(u => u.Email == Email.Text))
 			{
-				// Измените свойства объекта user
 				user.Email = Email.Text;
 				user.Name = Name.Text;
 				user.Surname = Surname.Text;
-				// Добавьте другие изменения, если необходимо
 
-				// Сохраните изменения в базе данных
 				ConnectionDB.AnimalSittersEntities.SaveChanges();
-
-				// Опционально: Обновите отображение данных в интерфейсе, если требуется
+			}
+			else
+			{
+				MessageBox.Show("Ошибка.");
 			}
 		}
 	}

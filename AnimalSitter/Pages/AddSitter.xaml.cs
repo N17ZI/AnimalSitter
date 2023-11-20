@@ -30,7 +30,7 @@ namespace AnimalSitter.Pages
 			{
 				
 
-				if (/*!ConnectionDB.AnimalSittersEntities.Listining.Any(u => u.Id_user == ConnectionDB.current_id)*/Name.Text!=null)
+				if (/*!ConnectionDB.AnimalSittersEntities.Listining.Any(u => u.Id_user == ConnectionDB.current_id)*/Name.Text!=null && Desc.Text!=null && Stage.Text != null)
 				{
 					Listining newListining = new Listining
 					{
@@ -44,6 +44,10 @@ namespace AnimalSitter.Pages
 					ConnectionDB.AnimalSittersEntities.SaveChanges();
 
 					NavigationService.Navigate(new Main());
+				}
+				else
+				{
+					MessageBox.Show("У вас есть незаполненные поля!");
 				}
 			}
 			catch
